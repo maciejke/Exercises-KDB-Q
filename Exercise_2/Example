@@ -1,0 +1,10 @@
+Example:
+Navigate in bash to the directory where you downloaded the files
+Open the q process
+Load the file with the \l Run.q command
+
+timeRange: 2025.01.18D14:47:41.420199000 2025.01.18D14:48:00.420199000 // declare time range
+symbols: `EURUSD`USDJPY // define symbols
+VWAP[data; timeRange; symbols] // call the VWAP the function
+TWAP[data; timeRange; symbols] // call the TWAP function
+

@@ -1,0 +1,21 @@
+For timeRange = 2025.01.18D14:47:41.420199000 2025.01.18D14:48:00.420199000 and symbols = 'EURUSD
+the expected result is 1.260436. VWAP should be calculated as follows:
+(1.2973×3700 + 1.1851×9300 + 1.3848×5400 + 1.14×7600 + 1.2404×1900 + 1.4874×1600 + 1.3642×3100 + 1.407×1100) / (3700+9300+5400+7600+1900+1600+3100+1100) = 4800.01+11021.43+7477.92+8664+2356.76+2379.84+4229.02+1547.7 / 33700 = 42476.68 / 33700 = 1.260435608
+After running the function: 
+q)VWAP[data; timeRange; symbols]
+symbol| VWAPresult
+------| ----------
+EURUSD| 1.260436  
+
+we get the expected result (rounded to the 6th decimal place by default)
+
+For the same timeRange and symbols expected result for TWAP is 1.313275. TWAP should be calculated as follows:
+(1.2973+1.1851+1.3848+1.14+1.2404+1.4874+1.3642+1.407) / 8 = 10.5062÷8 = 1.313275
+
+After running the function: 
+q)TWAP[data; timeRange; symbols]
+symbol| TWAPresult
+------| ----------
+EURUSD| 1.313275 
+
+we get the expected result
